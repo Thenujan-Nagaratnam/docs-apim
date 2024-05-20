@@ -59,17 +59,152 @@ To enable the Marketplace Assistant and populate the vector database, the API Ma
 
 To ensure that the Marketplace Assistant is aware of all published APIs and to update the vector database with the current APIs, follow these steps:
 
-1. First you have to download and intialize the apictl. For more information, see <a href="https://apim.docs.wso2.com/en/latest/install-and-setup/setup/api-controller/getting-started-with-wso2-api-controller/#download-and-initialize-the-apictl">Download and initialize the apictl</a>.
+1.  First you have to download and intialize the apictl. For more information, see <a href="https://apim.docs.wso2.com/en/latest/install-and-setup/setup/api-controller/getting-started-with-wso2-api-controller/#download-and-initialize-the-apictl">Download and initialize the apictl</a>.
 
-2. Run the following apictl command to update the vector Database with the current APIs.
+2.  Run the following apictl commands to update the vector Database with the current APIs.
 
-```go
-apictl upload apis --endpoint "https://dev-tools.wso2.com/apim-ai-service" --token "<use token that you generated>" -e "<your environment>"
-```
+    1.  Set token as a config variable
 
-Replace `<your_access_token>` with the access token you generated, and `<your_environment>` with your specific environment.
+         - **Command**
 
-This command will delete any existing APIs in the vector database and upload all the public APIs available in the specified environment. If you intend to use the same access token across different deployments, you can continue using it without generating a new one each time.
+               ```bash
+               apictl set --ai-token "<use token that you generated>"
+               ```
+
+    2.  Delete APIs and API Products from vector database.
+
+        - **Command**
+
+               ```bash
+               apictl ai delete artifacts -e "<environment>"
+               ```
+
+               ```bash
+               apictl ai delete artifacts --token "<use token that you generated>" -e "<environment>"
+               ```
+
+               ```bash
+               apictl ai delete artifacts --token "<use token that you generated>" --endpoint "<endpoint of ai service>" -e "<environment>"
+               ```
+
+            !!! info
+                **Flags:**  
+                
+                  -  Required :  
+                     `--environment` or `-e` : Environment to be searched
+                  -  Optional :  
+                     `--token` : On prem key of AI services  
+                     `--endpoint` : Endpoint url of AI services
+
+            !!! example
+                  ```bash
+                     apictl ai delete artifacts -e dev
+                  ```
+
+                  ```bash
+                     apictl ai delete artifacts --token 2fdca1b6-6a28-4aea-add6-77c97033bdb9 artifacts -e dev
+                  ```
+
+                  ```bash
+                     apictl ai delete artifacts --token 2fdca1b6-6a28-4aea-add6-77c97033bdb9 artifacts --endpoint https://dev-tools.wso2.com/apim-ai-service -e dev
+                  ```
+            !!! note
+                  - Note that if you have already set the token to the config variable, you dont have to use the --token flag
+
+
+    3.  Upload APIs to vector database.
+
+         - **Command**
+
+            ```bash
+            apictl ai upload apis -e "<environment>"
+            ```
+
+            ```bash
+            apictl ai upload apis -e "<environment>" --all
+            ```
+
+            ```bash
+            apictl ai upload apis --token "<use token that you generated>" --endpoint "<endpoint of ai service>" -e "<environment>"
+            ```
+
+            !!! info
+                **Flags:**
+
+                  -   Required :  
+                     `--environment` or `-e` : Environment to be searched
+                  -   Optional :  
+                     `--token` : On prem key of AI services  
+                     `--endpoint` : Endpoint url of AI services  
+                     `--all` : Upload both APIs and API Products.
+
+            !!! example
+                  ```bash
+                  apictl ai upload apis -e dev
+                  ```
+
+                  ```bash
+                  apictl ai upload apis -e dev --all
+                  ```
+
+                  ```bash
+                  apictl ai upload apis --token 2fdca1b6-6a28-4aea-add6-77c97033bdb9 artifacts -e dev
+                  ```
+
+                  ```bash
+                  apictl ai upload apis --token 2fdca1b6-6a28-4aea-add6-77c97033bdb9 artifacts --endpoint https://dev-tools.wso2.com/apim-ai-service -e dev
+                  ```
+            !!! note
+                  - Note that if you have already set the token to the config variable, you dont have to use the --token flag
+
+    4.  Upload API Products to vector database.
+
+         - **Command**
+
+            ```bash
+            apictl ai upload api-products -e "<environment>"
+            ```
+
+            ```bash
+            apictl ai upload api-products -e "<environment>" --all
+            ```
+
+            ```bash
+            apictl ai upload api-products --token "<use token that you generated>" --endpoint "<endpoint of ai service>" -e "<environment>"
+            ```
+
+            !!! info
+                **Flags:**
+
+                  -   Required :  
+                     `--environment` or `-e` : Environment to be searched
+                  -   Optional :  
+                     `--token` : On prem key of AI services  
+                     `--endpoint` : Endpoint url of AI services  
+                     `--all` : Upload both APIs and API Products.  
+
+            !!! example
+                  ```bash
+                  apictl ai upload api-products -e dev
+                  ```
+
+                  ```bash
+                  apictl ai upload api-products -e dev --all
+                  ```
+
+                  ```bash
+                  apictl ai upload api-products --token 2fdca1b6-6a28-4aea-add6-77c97033bdb9 artifacts -e dev
+                  ```
+
+                  ```bash
+                  apictl ai upload api-products --token 2fdca1b6-6a28-4aea-add6-77c97033bdb9 artifacts --endpoint https://dev-tools.wso2.com/apim-ai-service -e dev
+                  ```
+            !!! note
+                  - Note that if you have already set the token to the config variable, you dont have to use the --token flag
+
+These instructions involve removing any existing APIs and API Products from the vector database, then uploading all the public APIs and API Products from the currently logged-in user's tenant within a specified environment. Similarly, this process can be repeated for all tenants.
+
+If you intend to use the same access token across different deployments, you can continue using it without generating a new one each time.
 
 This process ensures that the Marketplace Assistant is up-to-date with all published APIs, enhancing its ability to provide accurate and relevant assistance.
 
