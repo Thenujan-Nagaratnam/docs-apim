@@ -7,7 +7,7 @@ The Marketplace Assistant is a powerful tool provided by API Manager, utilizing 
 Follow the steps below to get started with the Marketplace Assistant:
 
 !!! tip
-If you've previously registered your environment for the [API Chat]({{base_path}}/consume/invoke-apis/invoke-apis-using-tools/test-apis-with-apichat), you can skip Step 1 by utilizing the same credentials for the Marketplace Assistant. Otherwise, complete Step 1 to register your on-premise environment.
+    If you've previously registered your environment for the [API Chat]({{base_path}}/consume/invoke-apis/invoke-apis-using-tools/test-apis-with-apichat), you can skip Step 1 by utilizing the same credentials for the Marketplace Assistant. Otherwise, complete Step 1 to register your on-premise environment.
 
 ## Step 1 - Sign in to Choreo
 
@@ -23,13 +23,13 @@ Follow the instructions below to register your on-premise environment:
 
 1. Click the **Settings** on the bottom left corner.
 
-   [![Settings Menu]({{base_path}}/assets/img/observe/settings-menu.png)]({{base_path}}/assets/img/observe/settings-menu.png)
+      [![Settings Menu]({{base_path}}/assets/img/observe/settings-menu.png)]({{base_path}}/assets/img/observe/settings-menu.png)
 
 2. If you are a member of multiple organizations, select the appropriate organization from the top left-hand corner.
 
 3. Select the **On-prem Keys** tab and click **Generate Key**.
 
-   [![On-prem Key]({{base_path}}/assets/img/observe/on-prem-key.png)]({{base_path}}/assets/img/observe/on-prem-key.png)
+      [![On-prem Key]({{base_path}}/assets/img/observe/on-prem-key.png)]({{base_path}}/assets/img/observe/on-prem-key.png)
 
 4. Enter a suitable name for your environment (e.g., dev).
 
