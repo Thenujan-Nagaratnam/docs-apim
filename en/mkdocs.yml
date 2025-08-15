@@ -19,12 +19,12 @@
 site_name: WSO2 API Manager Documentation
 site_description: Documentation for WSO2 API Manager
 site_author: WSO2
-site_url: https://apim.docs.wso2.com/en/latest/
+site_url: https://apim.docs.wso2.com/en/4.6.0/
 
 # Repository
 repo_name: wso2/docs-apim
 repo_url: https://github.com/wso2/docs-apim
-edit_uri: https://github.com/wso2/docs-apim/edit/master/en/docs/
+edit_uri: https://github.com/wso2/docs-apim/edit/4.6.0/en/docs/
 dev_addr: localhost:8000
 
 # Copyright
@@ -339,6 +339,14 @@ nav:
                 - Content Safety: ai-gateway/ai-guardrails/safety-categories/content-safety.md
                 - Content Usage Control: ai-gateway/ai-guardrails/safety-categories/content-usage-control.md
                 # - PII Safety: ai-gateway/ai-guardrails/safety-categories/pii-safety.md
+    - MCP Servers:
+        - Overview: mcp/overview.md
+        - Create from an OpenAPI Definition: mcp/create-from-openapi.md
+        - Create from an Existing API: mcp/create-from-api.md
+        - Proxy an Existing MCP Server: mcp/create-from-mcp-server.md
+        - Update and Deploy an MCP Server: mcp/update-and-deploy-mcp-server.md
+        - Subscribe to an MCP Server: mcp/subscribe-to-a-mcp-server.md
+        - Test with the MCP Playground: mcp/invoke-a-mcp-server-using-playground.md
     - Analytics:
         - API Analytics:
             - Choreo Based Analytics: 
@@ -1153,8 +1161,8 @@ extra:
         helm_chart:
             version: 1.2.0-1
             git_tag: v1.2.0.1
-    site_version: 4.4.0
+    site_version: 4.6.0
     # base_path: http://localhost:8000/en/latest
-    base_path: https://apim.docs.wso2.com/en/latest
+    base_path: https://apim.docs.wso2.com/en/4.6.0
     envoy_path: https://www.envoyproxy.io/docs/envoy/v1.24.1
     
