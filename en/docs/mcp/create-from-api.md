@@ -9,7 +9,7 @@ This approach is faster when:
 * You want to reuse existing API governance (security, throttling, analytics) while enabling tool-style access.
 
 !!! tip
-Well-structured API resources with clear naming and descriptions will translate into more intuitive MCP tools.
+    Well-structured API resources with clear naming and descriptions will translate into more intuitive MCP tools.
 
 
 1. **Go to the Publisher Portal**
@@ -27,7 +27,7 @@ Well-structured API resources with clear naming and descriptions will translate 
    * Choose which API operations should become tools.
    * Click **Next**.
 
-   [![MCP Server from API Select Tools Selecteded]({{base_path}}/assets/img/mcp/create-mcp-servers-from-api-tools-selecteded.png){: style="width:90%"}]({{base_path}}/assets/img/mcp/create-mcp-servers-from-api-tools-selecteded.png)
+   [![MCP Server from API Select Tools Selecteded]({{base_path}}/assets/img/mcp/create-mcp-servers-from-api-tools-selected.png){: style="width:90%"}]({{base_path}}/assets/img/mcp/create-mcp-servers-from-api-tools-selected.png)
 
 4. **Enter MCP Server details**
    Provide the details and click **Create**.

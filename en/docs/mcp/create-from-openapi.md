@@ -5,7 +5,7 @@ The Publisher Portal will import the definition, list all available operations, 
 You can then configure your MCP Server details—such as name, context, version, and runtime endpoint—before publishing it through APIM.
 
 !!! tip
-   The quality of the imported tools depends on the quality of your OpenAPI definition. Clear operation IDs, descriptions, and parameter schemas will result in more usable and descriptive tools.
+    The quality of the imported tools depends on the quality of your OpenAPI definition. Clear operation IDs, descriptions, and parameter schemas will result in more usable and descriptive tools.
 
 1. **Go to the Publisher Portal**
    In the navigation, click **Import API Definition** → **Create MCP Server from Definition**.

@@ -12,7 +12,7 @@ The **Model Context Protocol (MCP)** in WSO2 API Manager provides a standardized
 * **Client** – Mediates communication with one or more MCP servers.
 * **Server** – Publishes tools, schemas, and metadata for discovery and invocation.
 
-> See the official MCP specification for full protocol details.
+> For full protocol details, see the [official MCP specification](https://modelcontextprotocol.io/docs/getting-started/intro).
 
 ## MCP Core Concepts
 
@@ -27,8 +27,15 @@ The **Model Context Protocol (MCP)** in WSO2 API Manager provides a standardized
 * Track **tool usage analytics** for capacity and optimization.
 * Ship **versioned tool changes** with minimal disruption.
 
+## Manage MCP Servers with WSO2 API Manager
+
+WSO2 API Manager provides a unified platform for managing MCP Servers, enabling you to transform APIs into AI-ready tools and govern their lifecycle. With a centralized control plane, you can create, discover, and manage MCP Servers efficiently—streamlining workflows for both API developers and AI agent builders.
+
+   [![API Manager MCP Architecture]({{base_path}}/assets/img/mcp/mcp-architecture.png)]({{base_path}}/assets/img/mcp/mcp-architecture.png)
+
+
 !!! note
-   This guide walks you from defining tools to deploying and publishing an MCP Server in WSO2 API Manager.
+    This guide walks you from defining tools to deploying and publishing an MCP Server in WSO2 API Manager.
 
 ## Quick Start (at a glance)
 
@@ -38,7 +45,7 @@ The **Model Context Protocol (MCP)** in WSO2 API Manager provides a standardized
 5. **Publish & test** (run discovery, call tools, review analytics).
 
 !!! tip
-   Keep input schemas minimal and strongly typed; LLMs perform better with concise, unambiguous contracts.
+    Keep input schemas minimal and strongly typed; LLMs perform better with concise, unambiguous contracts.
 
 ## Next Step → MCP Server Creation Options
 

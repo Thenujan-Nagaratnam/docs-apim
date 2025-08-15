@@ -43,7 +43,7 @@ Once your MCP Server is created, the **Tools** section allows you to adjust exis
 * Group related tools with consistent prefixes (e.g., `orders_list`, `orders_create`, `orders_cancel`).
 
 !!! note
-Renaming tools and improving their descriptions significantly enhances discoverability and usability for client applications and LLMs.
+    Renaming tools and improving their descriptions significantly enhances discoverability and usability for client applications and LLMs.
 
 ### 2. Deploying the MCP Server
 
