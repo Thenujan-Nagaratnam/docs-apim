@@ -620,11 +620,12 @@ nav:
                 - Build a CI/CD Pipeline for APIs using Jenkins: install-and-setup/setup/api-controller/building-jenkins-ci-cd-pipeline.md
             - Manage Environments Using the CLI:
                 - Getting Started with WSO2 API Controller (apictl): install-and-setup/setup/api-controller/getting-started-with-wso2-api-controller.md
-                - Manage APIs and API Products:
-                    - Manage APIs and API Products: install-and-setup/setup/api-controller/managing-apis-api-products/managing-apis-and-api-products.md
-                    - Import APIs Via Dev First Approach: install-and-setup/setup/api-controller/managing-apis-api-products/importing-apis-via-dev-first-approach.md
+                - Manage APIs, API Products and MCP Servers:
+                    - Manage APIs, API Products and MCP Servers: install-and-setup/setup/api-controller/managing-apis-api-products/managing-apis-and-api-products.md
+                    - Import APIs and MCP Servers Via Dev First Approach: install-and-setup/setup/api-controller/managing-apis-api-products/importing-apis-via-dev-first-approach.md
                     - Migrate APIs to Different Environments: install-and-setup/setup/api-controller/managing-apis-api-products/migrating-apis-to-different-environments.md
                     - Migrate API Products (with or without Dependent APIs) to Different Environments: install-and-setup/setup/api-controller/managing-apis-api-products/migrating-api-products-to-different-environments.md
+                    - Migrate MCP Servers to Different Environments: install-and-setup/setup/api-controller/managing-apis-api-products/migrating-mcp-servers-to-different-environments.md
                 - Manage Applications:
                     - Manage Applications: install-and-setup/setup/api-controller/managing-applications/managing-applications.md
                     - Migrate Apps to Different Environments: install-and-setup/setup/api-controller/managing-applications/migrating-applications-to-different-environments.md

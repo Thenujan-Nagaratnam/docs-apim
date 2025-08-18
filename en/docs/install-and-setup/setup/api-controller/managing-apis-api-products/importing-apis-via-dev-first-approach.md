@@ -468,4 +468,50 @@ After editing the mandatory fields in the API Project, you can import the API to
     ``` bash
     Successfully imported API!
     ```
+
+## Import a MCP Server project
+
+!!! info
+    **Before you begin...** 
+
+    -   Make sure you have already created an environment to which you are planning to import the MCP Server project. If not, follow steps in [Add an Environment]({{base_path}}/install-and-setup/setup/api-controller/getting-started-with-wso2-api-controller#add-an-environment).
     
+    -   Make sure you have logged-in to the importing environment. If not, follow steps in [Login to an Environment]({{base_path}}/install-and-setup/setup/api-controller/getting-started-with-wso2-api-controller#login-to-an-environment). 
+
+!!! tip
+    A user with `Internal/devops` role or `admin` role is allowed to import MCP Server projects. To create a custom user who can import, refer [Steps to Create a Custom User who can Perform API Controller Operations]({{base_path}}/install-and-setup/setup/api-controller/advanced-topics/creating-custom-users-to-perform-api-controller-operations/#steps-to-create-a-custom-user-who-can-perform-api-controller-operations).
+
+After editing the mandatory fields in the MCP Server project, you can import it to an environment using the following commands:
+
+-   **Command**
+    ```bash
+    apictl import mcp-server -f <path to MCP Server Project> -e <environment>
+    ```
+    ```bash
+    apictl import mcp-server --file <path to MCP Server Project> --environment <environment> --params=<environment params file>
+    ```
+
+    !!! info
+        **Flags:**  
+        -   Required :  
+            `--file` or `-f` : The file path of the MCP Server project to import.  
+            `--environment` or `-e` : Environment to which the MCP Server should be imported.   
+        -   Optional :  
+            `--params` : Provide an environment params file for MCP Server.  
+            `--skip-cleanup` : Leave all temporary files created in apictl during import process. The default value is `false`.    
+
+    !!! example
+        ```bash
+        apictl import mcp-server -f ~/my-mcp-server -e production
+        ```
+        ```bash
+        apictl import mcp-server --file ~/my-mcp-server --environment production --params prod/params.yaml
+        ```
+
+    !!! tip
+        When using the `--update` flag with the `import mcp-server` command, apictl will check if the given MCP Server exists in the targeted environment. If it exists, it will update the existing MCP Server. If not, it will create a new MCP Server in the imported environment.
+
+-   **Response**
+    ```bash
+    Successfully imported MCP Server!
+    ```
