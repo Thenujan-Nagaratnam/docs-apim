@@ -196,18 +196,14 @@ Azure AI Foundry provides access to multiple AI models from various providers th
 
     ```python
     from langchain_azure_ai.chat_models import AzureAIChatCompletionsModel
+    from azure.core.credentials import AzureKeyCredential
 
     # Configure Langchain SDK to use WSO2 API Manager proxy
     llm = AzureAIChatCompletionsModel(
         endpoint="your-apim-proxy-url/models",
-        credential="dummy-api-key",
+        credential=AzureKeyCredential("your-apim-api-key"),
         model="your-deployment",
         api_version="2024-05-01-preview",
-        client_kwargs={
-            "headers": {
-                "ApiKey": "your-apim-api-key",
-            }
-        }
     )
 
     # Example usage
